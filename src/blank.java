@@ -29,9 +29,7 @@ public class blank extends JFrame {
 	 * @throws ClassNotFoundException 
 	 */
 	public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException {
-		UIManager.setLookAndFeel("com.seaglasslookandfeel.SeaGlassLookAndFeel");
-		UIManager.getLookAndFeelDefaults().put("defaultFont", new Font("Microsoft Yahei",Font.PLAIN,13));
-		
+
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
