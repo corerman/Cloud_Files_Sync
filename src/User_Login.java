@@ -20,8 +20,8 @@ import java.awt.event.FocusEvent;
 public class User_Login extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
+	private JTextField username;
+	private JTextField password;
 	
 	/**
 	 * Launch the application.
@@ -60,51 +60,51 @@ public class User_Login extends JFrame {
 		setBounds(100, 100, 314, 178);
 		contentPane = new JPanel();
 
-		contentPane.setBackground(new Color(85, 107, 47));
+		contentPane.setBackground(SystemColor.inactiveCaptionText);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		textField = new JTextField();
-		textField.addFocusListener(new FocusAdapter() {
+		username = new JTextField();
+		username.addFocusListener(new FocusAdapter() {
 			@Override
 			public void focusGained(FocusEvent arg0) {
-				if(textField.getText().compareTo("用户名：")==0)
-					textField.setText("");
+				if(username.getText().compareTo("用户名：")==0)
+					username.setText("");
 			}
 			@Override
 			public void focusLost(FocusEvent e) {
-				if(textField.getText().compareTo("")==0)
-					textField.setText("用户名：");
+				if(username.getText().compareTo("")==0)
+					username.setText("用户名：");
 			}
 		});
 
 		
-		textField.setToolTipText("");
-		textField.setBounds(60, 23, 200, 30);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		username.setToolTipText("");
+		username.setBounds(60, 23, 200, 30);
+		contentPane.add(username);
+		username.setColumns(10);
 		
-		textField_1 = new JTextField();
-		textField_1.addFocusListener(new FocusAdapter() {
+		password = new JTextField();
+		password.addFocusListener(new FocusAdapter() {
 			@Override
 			public void focusGained(FocusEvent e) {
-				if(textField_1.getText().compareTo("密码：")==0)
-					textField_1.setText("");
+				if(password.getText().compareTo("密码：")==0)
+					password.setText("");
 				
 			}
 			@Override
 			public void focusLost(FocusEvent e) {
-				if(textField_1.getText().compareTo("")==0)
-					textField_1.setText("密码：");		
+				if(password.getText().compareTo("")==0)
+					password.setText("密码：");		
 			}
 		});
 		//textField_1.setToolTipText("");
-		textField_1.setText("密码：");
-		textField.setText("用户名：");
-		textField_1.setBounds(60, 66, 200, 30);
-		contentPane.add(textField_1);
-		textField_1.setColumns(10);
+		password.setText("密码：");
+		username.setText("用户名：");
+		password.setBounds(60, 66, 200, 30);
+		contentPane.add(password);
+		password.setColumns(10);
 		
 		JButton btnNewButton = new JButton("\u767B\u5F55");
 		btnNewButton.setBounds(70, 106, 74, 34);
